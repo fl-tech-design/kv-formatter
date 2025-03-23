@@ -22,9 +22,9 @@ Professional formatter for Kivy .kv files
 
 ## Usage
 1. Open a `.kv` file
-2. Place your widgets at the desired position
-3. All properties will be automatically indented
-4. Format with `Shift+Alt+F` or right-click → "Format Document"
+2. Position widgets at desired indentation levels
+3. Use **`Ctrl+Shift+Alt+K`** (Windows/Linux) or **`Cmd+Shift+Alt+K`** (Mac) to format, instead of the standard format command. there were configuration problems, but with the new shortcut it works just as well. You don't need to do anything else
+4. Formatting preserves manual widget positions while auto-indenting properties
 
 ### Example
 ```kv

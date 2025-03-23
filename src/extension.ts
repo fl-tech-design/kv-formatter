@@ -53,7 +53,7 @@ export function activate(context: vscode.ExtensionContext) {
     // *******************************************************************
     // ** 2. Formatter registrieren (angepasst!)**
     // *******************************************************************
-    const formatter = vscode.languages.registerDocumentFormattingEditProvider('kivy', formatterProvider);
+    const formatter = vscode.languages.registerDocumentFormattingEditProvider('KvLang', formatterProvider);
     
     // *******************************************************************
     // ** 3. Manuellen Befehl hinzufügen (neu!)**

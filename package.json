@@ -2,7 +2,7 @@
   "name": "kv-formatter",
   "displayName": "KV Formatter",
   "description": "Professional formatter for Kivy .kv files",
-  "version": "0.1.3",
+  "version": "0.1.2",
   "author": "Hanspeter Fluetsch <fl-tech-design@gmx.ch>",
   "publisher": "fl-tech-design",
   "license": "MIT",
@@ -56,8 +56,8 @@
     "keybindings": [
       {
         "command": "kvFormatter.manualFormat",
-        "key": "ctrl+shift+alt+i",
-        "mac": "cmd+shift+alt+i",
+        "key": "ctrl+shift+alt+k",
+        "mac": "cmd+shift+alt+k",
         "when": "editorTextFocus"
       }
     ]
