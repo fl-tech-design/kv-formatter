@@ -2,7 +2,7 @@
   "name": "kv-formatter",
   "displayName": "KV Formatter",
   "description": "Professional formatter for Kivy .kv files",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Hanspeter Fluetsch <fl-tech-design@gmx.ch>",
   "publisher": "fl-tech-design",
   "license": "MIT",

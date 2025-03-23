@@ -21,6 +21,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/), and this 
 - N/A (No removals yet, as this is the initial release.)
 
 ---
+## [0.1.1] - 2025-03-23
+### Fixed
+- Fixed incorrect language configuration in `package.json`.
+- Added proper formatter registration for `.kv` files.
+
+### Changed
+- Updated `package.json` to include missing formatter contributions.
 
 ## [0.1.0] - 2025-03-23
 ### Added
