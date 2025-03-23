@@ -1,0 +1,21 @@
+{
+  "name": "Kivy",
+  "scopeName": "source.kv",
+  "fileTypes": [
+    "kv"
+  ],
+  "patterns": [
+    {
+      "match": "^\\s*([A-Za-z0-9_]+):$",
+      "name": "entity.name.tag.kv"
+    },
+    {
+      "match": "^\\s*([a-zA-Z0-9_]+):\\s*(.*)$",
+      "name": "meta.property.kv"
+    },
+    {
+      "match": "#.*$",
+      "name": "comment.line.kv"
+    }
+  ]
+}

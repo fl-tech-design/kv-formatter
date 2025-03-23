@@ -1,8 +1,12 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-    const formatter = vscode.languages.registerDocumentFormattingEditProvider('kivy', {
+    // *******************************************************************
+    // ** 1. Formatter-Provider definieren (neu!)**
+    // *******************************************************************
+    const formatterProvider = {
         provideDocumentFormattingEdits(document: vscode.TextDocument) {
+            console.log("KV Formatter wurde aufgerufen!");  
             const edits: vscode.TextEdit[] = [];
             let indentLevel = 0;
             let isInsideWidget = false;
@@ -44,7 +48,33 @@ export function activate(context: vscode.ExtensionContext) {
 
             return edits;
         }
+    };
+
+    // *******************************************************************
+    // ** 2. Formatter registrieren (angepasst!)**
+    // *******************************************************************
+    const formatter = vscode.languages.registerDocumentFormattingEditProvider('kivy', formatterProvider);
+    
+    // *******************************************************************
+    // ** 3. Manuellen Befehl hinzufügen (neu!)**
+    // *******************************************************************
+    const manualFormatCommand = vscode.commands.registerCommand('kvFormatter.manualFormat', async () => {
+        const editor = vscode.window.activeTextEditor;
+        if (!editor) return;
+
+        // Rufe den FormatterProvider direkt auf
+        const document = editor.document;
+        const edits = await formatterProvider.provideDocumentFormattingEdits(document);
+        
+        if (edits && edits.length > 0) {
+            const workspaceEdit = new vscode.WorkspaceEdit();
+            workspaceEdit.set(document.uri, edits);
+            await vscode.workspace.applyEdit(workspaceEdit);
+        }
     });
 
-    context.subscriptions.push(formatter);
+    // *******************************************************************
+    // ** 4. Alles registrieren (angepasst!)**
+    // *******************************************************************
+    context.subscriptions.push(formatter, manualFormatCommand);
 }

@@ -4,23 +4,15 @@ All notable changes to the **KV Formatter** extension will be documented in this
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
-### Added
-- Initial release of the KV Formatter extension.
-- Support for automatic widget hierarchy detection.
-- 4-space indentation for Kivy `.kv` files.
-- Preservation of comments and empty lines during formatting.
 
+## [0.1.3] - 2025-03-23
 ### Fixed
-- N/A (No fixes yet, as this is the initial release.)
+- Fixed bug with format command. new format command "crtl+shift+alt+i"
 
-### Changed
-- N/A (No changes yet, as this is the initial release.)
+## [0.1.2] - 2025-03-23
+### Fixed
+- Fixed incorrect language configuration in `package.json`.
 
-### Removed
-- N/A (No removals yet, as this is the initial release.)
-
----
 ## [0.1.1] - 2025-03-23
 ### Fixed
 - Fixed incorrect language configuration in `package.json`.

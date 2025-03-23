@@ -2,7 +2,7 @@
   "name": "kv-formatter",
   "displayName": "KV Formatter",
   "description": "Professional formatter for Kivy .kv files",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "author": "Hanspeter Fluetsch <fl-tech-design@gmx.ch>",
   "publisher": "fl-tech-design",
   "license": "MIT",
@@ -23,28 +23,42 @@
     "formatter",
     "kv"
   ],
-  "activationEvents": [
-    "onLanguage:kivy"  
-  ],
   "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
-        "id": "kivy",  
-        "extensions": [
-          ".kv"  
-        ],
-        "aliases": [
-          "Kivy",  
-          "kv"  
-        ]
+        "id": "KvLang",
+        "extensions": [".kv"],
+        "aliases": ["KvLang", "kv"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "KvLang",
+        "scopeName": "source.kv",
+        "path": "./syntaxes/kivy.tmLanguage.json"
       }
     ],
     "formatters": [
       {
-        "language": "kivy",  
-        "extension": ".kv",  
-        "displayName": "KV Formatter"  
+        "language": "KvLang",
+        "extension": ".kv",
+        "displayName": "KV Formatter"
+      }
+    ],
+    "commands": [
+      {
+        "command": "kvFormatter.manualFormat",
+        "title": "KV Formatter: Manuell formatieren"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "kvFormatter.manualFormat",
+        "key": "ctrl+shift+alt+i",
+        "mac": "cmd+shift+alt+i",
+        "when": "editorTextFocus"
       }
     ]
   },
