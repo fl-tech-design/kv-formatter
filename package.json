@@ -3,7 +3,7 @@
   "displayName": "KV Formatter",
   "description": "Professional formatter for Kivy .kv files",
   "version": "0.1.0",
-  "author": "Hanspeter Fluetsch<fl-tech-design@gmx.ch>",
+  "author": "Hanspeter Fluetsch <fl-tech-design@gmx.ch>",
   "publisher": "fl-tech-design",
   "license": "MIT",
   "repository": {
@@ -24,20 +24,27 @@
     "kv"
   ],
   "activationEvents": [
-    "onLanguage:kivy"
+    "onLanguage:kivy"  
   ],
   "main": "./out/extension.js",
   "contributes": {
     "languages": [
       {
-        "id": "kivy",
+        "id": "kivy",  
         "extensions": [
-          ".kv"
+          ".kv"  
         ],
         "aliases": [
-          "Kivy",
-          "kv"
+          "Kivy",  
+          "kv"  
         ]
+      }
+    ],
+    "formatters": [
+      {
+        "language": "kivy",  
+        "extension": ".kv",  
+        "displayName": "KV Formatter"  
       }
     ]
   },
