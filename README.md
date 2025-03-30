@@ -1,5 +1,8 @@
 # KV Formatter
-
+**IMPORTANT NOTICE**  
+Canvas blocks (`canvas.before`, `canvas.after`) may cause formatting issues.  
+Place them at the end of widget definitions for best results.  
+Help via pull request is welcome!  
 Professional formatter for Kivy .kv files
 
 ## Features

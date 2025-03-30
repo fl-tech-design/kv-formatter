@@ -4,7 +4,9 @@ All notable changes to the **KV Formatter** extension will be documented in this
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
-
+## [0.1.3] - 2025-03-30
+- Added warning about canvas block formatting limitations
+- Improved documentation clarity
 
 ## [0.1.2] - 2025-03-23
 ### Fixed
